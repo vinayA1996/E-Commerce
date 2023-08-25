@@ -1,0 +1,14 @@
+<div class="col-6 m-2 ">
+    <div class="row px-3 m-3 ">
+        <div class="card p-2" style="width: 18rem;" *ngFor="let products of cars">
+            <p>Product Id: {{products.productid}}</p>
+            <p>Product Name: {{products.productname}}</p>
+            <p>Product Description {{products.des}}</p>
+            <img src="{{products.img}}" alt="img not set">
+            <button type="button" class="btn btn-danger" (click)="deleteitem(products.productname)" >Delete</button>
+            
+            <div>
+            </div>
+        </div>
+    </div>
+</div>

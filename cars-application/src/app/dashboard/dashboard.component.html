@@ -1,0 +1,19 @@
+
+<!-- <p>HEllo i am Dashboard</p> -->
+<button type="button" class="btn btn-warning mx-5 my-3" *ngIf="logindetail" (click)="logout()">Logout</button>
+<button type="button" class="btn btn-warning mx-5 my-3" *ngIf="logindetail"  ><a routerLink="/cart"> View-Cart </a></button>
+
+<div class="col-12 my-5  ">
+    <div class="row px-3">
+        <div class="card p-2 mx-2" style="width: 18rem;" *ngFor="let products of AllProducts">
+            <!-- <p>Product Id: {{products.productid}}</p> -->
+            <h1> {{products.productname}}</h1>
+            <h3> {{products.des}}</h3>
+            <img src="{{products.img}}" alt="img not set">
+            <button type="button" class="btn btn-outline-success" (click)="addToCart(products)">add item</button>
+            <button type="button" class="btn btn-warning" >View Details</button>
+            <div>
+            </div>
+        </div>
+    </div>
+</div>
